@@ -1,0 +1,127 @@
+.cabecalho__menu-hambuguer{
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0.5em;
+    display: inline-block;
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between; /*separa cada elemento com o mesmo espaço entre eles*/
+    align-items: center;
+    position: relative; /*coloquei no elemento pai*/
+}
+
+.container{
+    display: flex;
+    align-items:  center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+/*deixa as lista invisivel*/
+.lista-menu{
+    display: none;
+    position: absolute; /*coloquei no elemento filho*/
+    top: 100%;
+    text-align: center;
+    width: 60vw; /*medida em viewport*/
+}
+
+/*o checked ele detecta se o checkbox esta marcado*/ /*o elemento ~ serve para procurar o elemento que vem em seguida*/ 
+.container__botao:checked~.lista-menu{
+    display: block;
+
+}
+
+/*criar a borda branca atras dos elementos do menu*/
+.lista-menu__titulo,
+.lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+
+}
+
+.lista-menu__links{
+    text-decoration: none;
+    color: var(--cor-link);
+    text-transform: uppercase;
+
+}
+
+/*deixar o checkbox do menu invisivel*/
+.container__botao{
+    display: none;
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opções{
+    display: none;
+}
+
+/*Responsividade*/
+
+@media screen and (min-width:1024px){
+
+    .container__titulo, .container__titulo--negrito {
+        font-family: var(--fonte-secundaria) ;
+        font-size: 30px;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opções{
+        display: flex;
+    }
+
+    .opções__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opções__link{
+        text-decoration: none;
+        color: var(--cor-preta);
+    }
+
+    .container__img-favoritos{
+        display: none;
+    }
+
+    .cabecalho__menu-hambuguer{
+        display: none;
+    }
+    
+    /*Fazer com que assim que clicarmos no checkbox os itens da lista apareção*/
+    .opções__botão:checked~.lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    /*Deixa o icone do checkbox invisivel*/
+    .opções__botão{
+        display: none;
+    }
+    
+}

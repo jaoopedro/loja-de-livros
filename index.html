@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!--Informa a codificação de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Informa o tamanho de telas-->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> <!--Fontes-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Importando API para o carrossel, API swiperjs-->
+    <link rel="stylesheet" href="style.css"> <!--Associando a folha de estilo-->
+    <link rel="stylesheet" href="styles/banner.css">
+    
+    <title>AluraBooks</title>
+</head>
+
+<body>
+    
+    <header class="cabecalho"><!--Tag semantica para referencia ao cabeçalho-->
+        <div class="container">
+
+            <!--criando o menu hamburguer usando css-->
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu"> <!--label serve para referenciar tudo que esta dentro dele para outro atraves do ID-->
+                <span class="cabecalho__menu-hambuguer " class="container__imagem"></span>
+            </label>
+
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">Programação</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">Front-end</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">Infraestrutura</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">business</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">UX</a>
+                </li>
+            </ul>
+
+            <img src="img/Logo.svg" class="container__imagem" alt="logo do site" >
+            <h1 class="container__titulo"><b class="container__titulo--negrito">Livraria</b>Alfa</h1>
+
+        </div>
+
+        <ul class="opções">
+
+            <input type="checkbox" id="opções-menu" class="opções__botão">
+            <label for="opções-menu">
+                 <li class="opções__item"> Categorias </li>
+            </label>
+
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">Programação</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">Front-end</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">Infraestrutura</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">business</a>
+                </li>
+
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__links">UX</a>
+                </li>
+            </ul>
+
+            <li class="opções__item"> <a href="" class="opções__link"> Favoritos</a></li>
+            <li class="opções__item"> <a href="" class="opções__link"> Minha Estante</a></li>
+        </ul>
+
+        <div class="container">
+            <a href="#"><img src="img/Favoritos.svg" class="container__imagem container__img-favoritos" aalt="meus favoritos"></a>
+            <a href="#"><img src="img/Compras.svg" class="container__imagem" alt="carrinho de compras"></a>
+            <a href="#"><img src="img/Usuário.svg" class="container__imagem" alt="meu perfil"></a>
+        </div>
+    </header>
+
+    <!--Criação do banner abaixo do menu-->
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+        <!--Input search é o input de pesquisa e o placeholder é o texto dentro do input-->
+        <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?"> 
+    </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper"> 
+            
+            <!-- If we need pagination (bolinhas de navegação do carrossel) -->
+            <div class="swiper-pagination"></div>
+      
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/img__livros/ApacheKafka.png" alt="livros sobre Apacher"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Liderança.png" alt="livros sobre Liderança"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Javascript.png" alt="livros sobre Javascript"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Guia Front-end.png" alt="livros sobre Guia Front-end"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Portugol.png" alt="livros sobre Portugol"></div>
+
+            </div>
+        
+            <!-- If we need navigation buttons / setas de nevegação -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+        <div class="card">
+            <!--1° Linha-->
+            <div class="card__descrição">
+                <!--1° Coluna-->
+                <div class="descrição">
+                    <h3 class="descrição__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descrição__titulo_livro">Angula</h2>
+                    <p class="descrição__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <!--2° Coluna-->
+                <img src="img/Angula.svg" alt="" class="descrição__imagem">
+            </div>
+
+            <!--2°Linha-->
+            <div class="card__botões">
+                <!--1° Coluna-->
+                <ul class="botões">
+                    <li class="botões__item"><img src="img/Favoritos.svg" alt="Livros favoritos"></li>
+                    <li class="botões__item"><img src="img/Compras.svg" alt="Adicionar a loja de compras"></li>
+                </ul>
+
+                <!--2° Coluna-->
+                <a href="#" class="botões__ancora">Saiba Mais</a> <!--Foi usado ancora pois ancora é mais recomendado para redirecionamento de paginas e botões são recomendados para
+                funções Javascript-->
+            </div>
+        </div>
+    </section>
+
+    <!--Mais Vendidos-->
+</section>
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Mais Vendidos</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper"> 
+            
+            <!-- If we need pagination (bolinhas de navegação do carrossel) -->
+            <div class="swiper-pagination"></div>
+    
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/img__livros/ApacheKafka.png" alt="livros sobre Apacher"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Liderança.png" alt="livros sobre Liderança"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Javascript.png" alt="livros sobre Javascript"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Guia Front-end.png" alt="livros sobre Guia Front-end"></div>
+            <div class="swiper-slide"><img src="img/img__livros/Portugol.png" alt="livros sobre Portugol"></div>
+
+            </div>
+        
+            <!-- If we need navigation buttons / setas de nevegação -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+        <div class="card">
+            <!--1° Linha-->
+            <div class="card__descrição">
+                <!--1° Coluna-->
+                <div class="descrição">
+                    <h3 class="descrição__titulo">Autora do Mês</h3>
+                    <h2 class="descrição__titulo_livro">Juliana Agarikov</h2>
+                    <p class="descrição__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+                </div>
+                <!--2° Coluna-->
+                <img src="img/Autora.svg" alt="" class="descrição__imagem">
+            </div>
+
+            <!--2°Linha-->
+            <div class="card__botões">
+                <!--1° Coluna-->
+                <ul class="botões">
+                    <li class="botões__item"><img src="img/Favoritos.svg" alt="Livros favoritos"></li>
+                    <li class="botões__item"><img src="img/Compras.svg" alt="Adicionar a loja de compras"></li>
+                </ul>
+
+                <!--2° Coluna-->
+                <a href="#" class="botões__ancora">Saiba Mais</a> <!--Foi usado ancora pois ancora é mais recomendado para redirecionamento de paginas e botões são recomendados para
+                funções Javascript-->
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!--Script do carrossel-->
+    <script src="carrossel.js"></script>
+</body>
+
+</html>
