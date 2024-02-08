@@ -1,6 +1,7 @@
 @import url("styles/header.css"); /*Serve para importar um arquivo css para outro arquivo css*/
 @import url("styles/banner.css");
 @import url("styles/carrossel.css");
+@import url("styles/topicos.css");
 
 
 /*root usado para criar variaveis no css*/
