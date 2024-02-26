@@ -8,7 +8,49 @@ hr{
 
 }
 
+.lista-rodape{
+    display: none;
+}
+
 .rodape__titulo{
     text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
 
+}
+
+
+@media screen and (min-width:1024px){
+    .rodape{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .lista-rodape{
+        display: block;
+    }
+
+    .rodape__titulo{
+        text-align: center;
+        font-size: 24px;
+        text-transform: uppercase;
+    
+    }
+
+    .lista-rodape__item{
+        display: flex;
+        align-items: center;
+        margin: 0.5em 0;
+    }
+
+    .lista-rodape__link{
+        text-decoration: none;
+        color: var(--cinza);
+        margin-left: 0.5em;
+    }
+
+    .lista-rodape__titulo{
+        font-size: 14px;
+        color: var(--cinza-claro);
+    }
 }
