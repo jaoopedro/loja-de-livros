@@ -54,3 +54,11 @@ hr{
         color: var(--cinza-claro);
     }
 }
+
+/*Pseudo classes 
+
++	Seleciona elementos que estão logo após o elemento especificado antes do símbolo.	.container__botao + container__rotulo
+~	Seleciona elementos que estão após (mas não necessariamente em seguida) o elemento especificado antes do símbolo.	.container__botao ~ .container__rotulo
+>	Seleciona elementos que estão dentro do elemento especificado antes do símbolo.	.container__rotulo>.cabeçalho__menu-hamburguer
+
+*/
